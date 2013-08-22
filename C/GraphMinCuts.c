@@ -74,7 +74,7 @@ void err(const char* msg) {
 }
 
 /**
- * Reads array from file.
+ * Reads graph from file.
  * @param      graph     Pointer to the graph.
  * @param      file      The file where to read graph from.
  * @param      err       An error message, if any occcurred during reading.
@@ -292,7 +292,7 @@ void freeGraph(Graph* graph) {
 }
 
 /**
- * Clones a graph
+ * Clones a graph.
  * @param       graph    The graph to clone.
  * @return               The cloned graph.
  */
