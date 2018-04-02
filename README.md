@@ -14,6 +14,21 @@ Karger's basic algorithm iteratively contracts randomly chosen edges until only 
 those nodes represent a cut in the original graph. 
 By iterating this basic algorithm a sufficient number of times, a minimum cut can be found with high probability.
 
+## The algorithm
+```
+Foreach node v
+    Keep track of the set S(v) of nodes contracted into v
+    S(v) <- {v}
+If nodes v_1 and v_2 remain in graph G
+    Return cut(S(v_1), S(v_2))
+Else
+    e <- choose edge (u,v) uniformly at random
+    G' <- G after contracting e
+    x <- replace u and v
+    S(x) <- S(u) U S(v)
+    Recursively contract to G'
+```
+
 Running code examples
 ------------
 **C** implementation:
